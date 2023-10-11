@@ -30,18 +30,19 @@
 
  
   
-  <p id="target">I will become red </p>
+  <p id="targeted">I will become red </p>
   
   <script> 
+  let reactTime;
   function buttonPress1() {
     setTimeout(function(){
-      document.getElementById('target').style.color = "red"
+      document.getElementById('targeted').style.color = "red"
     }, 3000)
   }
 
   function buttonPress2() {
     setTimeout(()=>{
-      document.getElementById('target').style.color = "red"
+      document.getElementById('targeted').style.color = "red"
     }, 3000)
   }
 
