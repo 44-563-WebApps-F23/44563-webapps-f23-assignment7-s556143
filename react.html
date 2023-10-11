@@ -52,7 +52,8 @@
   }
 
   function startTime() {
-            for (let i = 0; i < 9; i++) {
+    let rand=Math.floor(Math.random()*(10 - 2 + 1) + 2);
+            for (let i = 0; i < rand; i++) {
                 setTimeout(() => {
                     document.getElementById('counter').innerHTML = i;
                 }, ((8 - i) * 1000))

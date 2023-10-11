@@ -35,6 +35,7 @@
         <input type="text" id="adding" placeholder="Type Here">
         <button onclick="addFront()">Add Front</button>
         <button onclick="remove()">remove</button>
+        <button onclick="swap()">Swap</button>
 </body>
 <script>
 	function makeNewDiv(){
@@ -69,6 +70,24 @@
             mergerItems[Math.floor(length/2)].remove();            
         }
     }
+
+    function swap() {
+		let mergerItems = document.getElementsByClassName("merger");
+		let cont = document.getElementById("target");
+		let item1 = Math.floor((Math.random() * mergerItems.length)+1);
+		console.log(item1);
+		let item2 = Math.floor((Math.random() * mergerItems.length)+1);
+		console.log(item2);
+		let data1 = document.getElementsByClassName("merger")[item1-1];
+		let data2 = document.getElementsByClassName("merger")[item2-1];
+
+		if (mergerItems.length > 1) {
+			let tmp = data1.innerHTML;
+			data1.innerHTML = data2.innerHTML;
+			data2.innerHTML = tmp;
+		}
+
+	}
 
 </script>
 </html>	
